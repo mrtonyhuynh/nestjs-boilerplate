@@ -1,0 +1,32 @@
+{
+  "name": "nestjs-turbo",
+  "version": "1.0.0",
+  "description": "Our common decorators, services, etc for NestJS projects",
+  "keywords": [
+    "Typescript",
+    "NestJS",
+    "Seed"
+  ],
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "author": "Tri Huynh <mr.tonyhuynh@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w",
+    "start": "tsc",
+    "prepack": "tsc",
+    "postpublish": "git push && git push --tags",
+    "postpack": "rm *.d.ts && rm *.js && rm -Rf modules"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.6.5",
+    "@nestjs/swagger": "^4.7.10",
+    "axios": "^0.21.1",
+    "class-transformer": "^0.3.2",
+    "class-validator": "^0.13.1",
+    "nestjs-pino": "^1.3.0",
+    "redis": "^3.0.2",
+    "swagger-ui-express": "^4.1.6"
+  }
+}

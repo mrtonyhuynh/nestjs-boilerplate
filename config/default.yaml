@@ -1,0 +1,34 @@
+application:
+  name: AppName
+  port: 3000
+  cors: false
+  apiPrefix: '/api'
+  bodyParserLimit: 50mb
+
+authentication:
+  successRoute: '/authentication/success'
+  authenticationRoute: '/authentication'
+  errorRoute: '/authentication?error='
+  passport:
+    google:
+      clientId: clientId
+      secret: secret
+      authorizedDomain: meetmaestro.com
+      callbackUrl: 'http://localhost:8080/api/authentication/google/callback'
+  session:
+    secret: secret
+    accessExpiration: 86400000 # ms - 24 hour
+    accessCookie:
+      name: access_token
+      options:
+        httpOnly: true
+        maxAge: 86400000 # ms - 24 hour
+        secure: true
+
+logger:
+  level: debug
+
+redis:
+  host: 'localhost'
+  keyPrefix: 'app_name_'
+  expiration: 86400000 # ms - 24 hours
